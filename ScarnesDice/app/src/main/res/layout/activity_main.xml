@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cowboydadas.scarnesdice.MainActivity">
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgViewDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="58dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dice1" />
+
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="ROLL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnHold"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnHold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:text="Hold"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewDice" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="RESET"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnHold"
+        app:layout_constraintStart_toEndOf="@+id/imgViewDice" />
+
+</android.support.constraint.ConstraintLayout>
